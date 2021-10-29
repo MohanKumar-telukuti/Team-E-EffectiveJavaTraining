@@ -100,10 +100,9 @@ public class BankAccount {
 		balance+=(balance*interestRate/1200);
 	}
 	
-	public boolean transferTo(double amount, String password, BankAccount target){ 
-
+	public boolean transferTo(double amount, String password, BankAccount targetaccount){ 
 		if(this.withdraw( amount, password)) {
-		target.deposit(amount);
+			targetaccount.deposit(amount);
 		}
 		return true;
 		}
